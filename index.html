@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All the blogs are here</h1>
+    <main>
+        <section id="blogs">
+            <header>
+                <h2>Blogs List</h2>
+                <ul id="blog-list">
+                    <li>Blog-01</li>
+                    <li>Blog-02</li>
+                    <li>Blog-03</li>
+                    <li>Blog-04</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h3>My awesome blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odit, repellat ipsam illo veniam eius quas hic facere est, nam atque commodi! Libero, eos a. Error, maiores modi! Expedita porro tenetur aliquid quidem vel aspernatur magnam obcaecati eum aperiam quibusdam.</p>
+            </article>
+            <article class="blog">
+                <h3>My awesome blog-2</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto illum natus, tenetur magni saepe nesciunt cumque, itaque adipisci consequatur excepturi cum! Numquam voluptatum tempora reprehenderit commodi alias accusantium ab? Mollitia laudantium sint hic aliquid, doloremque voluptate voluptas rem nesciunt? Voluptate.</p>
+            </article>
+            <article class="blog">
+                <h3>My awesome blog-3</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae culpa natus obcaecati repellendus tempora sunt alias ut autem perferendis excepturi quas error quam, ab provident ad qui architecto! Accusantium rerum libero accusamus voluptatem dolor beatae quam aspernatur, iste tempore eveniet.</p>
+            </article>
+            <article class="blog">
+                <h3>My awesome blog-4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci quia minima aspernatur assumenda iste. Vitae voluptatem praesentium dolor asperiores nesciunt aliquam, distinctio quasi voluptatum ab non blanditiis deleniti adipisci? Praesentium, assumenda asperiores eos officia saepe quia. Corporis, voluptatem aliquam.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const li = document.createElement('li');
+        li.innerText = "Blog-05";
+        document.getElementById('blog-list').appendChild(li);
+
+        //add article
+        const article = document.createElement('article');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'my awesome blog';
+        const p = document.createElement('p')
+        p.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci quia minima aspernatur assumenda iste. Vitae voluptatem praesentium dolor asperiores nesciunt aliquam, distinctio quasi voluptatum ab non blanditiis deleniti adipisci? Praesentium, assumenda asperiores eos officia saepe quia. Corporis, voluptatem aliquam.';
+        article.appendChild(h3);
+        article.appendChild(p);
+        const blogsSection = document.getElementById('blogs');
+        article.classList.add('blog');
+        blogsSection.appendChild(article);
+
+
+        const blogs = document.getElementsByClassName('blog');
+        for(const blog of blogs){
+            blog.style.color = 'red';
+            blog.style.border= '1px solid rebeccapurple';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '12px';
+            blog.style.padding = '12px';
+        }
+    </script>
+</body>
+</html>
