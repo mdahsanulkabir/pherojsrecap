@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>More Events</h2>
+    <section>
+        <h3 id="secret-info"> Very very important secret information</h3>
+        <input id="input-validation" type="text" placeholder="Please type delete">
+        <button id="delete-button">Delete</button>
+    </section>
+    <script>
+        document.getElementById('delete-button').addEventListener('click', () => {
+            if (document.getElementById('input-validation').value == 'delete'){
+                document.getElementById('secret-info').style.display = 'none';
+            }else {
+                alert("please type delete");
+            }            
+        })
+        // document.getElementById('input-validation').addEventListener('keyup', () => {
+        //     console.log(document.getElementById('input-validation').value);
+        // })
+        document.getElementById('input-validation').addEventListener('keyup', e => {
+            console.log(e.target.value);
+        })
+    </script>
+</body>
+</html>
